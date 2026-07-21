@@ -1,0 +1,15 @@
+# Phase-2 base-rate PILOT batch — 15 JGT papers, uniform random sample (seed=42) over the
+# 282 (of 286) JGT-corpus papers whose assembled prompt fits comfortably in context
+# (<55K input tokens, leaving 65K+ for Think-Max generation within the 131K window).
+# Drawn 2026-06-28. Reproduce: see the seeded sampler in docs/log.md entry of this date.
+# Year spread: 2023:3  2024:7  2025:5. Total input ~274K tokens (generation dominates cost).
+#
+# Goal: MEASURE base rates (findings/paper, severity x fixability mix, and how many of GLM's
+# own major flags survive its adversarial SELF-VERIFY re-check) before committing to a full
+# 286-paper sweep. NOT cherry-picked.
+#
+# GLM-5.2 only (DeepSeek dropped). One job does find + self-verify; then triage locally:
+#   run   (Jean Zay): SELF_VERIFY=1 scripts/jeanzay/job_verify_glm52.sh   (default; --self-verify)
+#   triage          : python scripts/triage.py --batch scripts/pilot_batch.txt --json reports/pilot_triage.json
+
+PAPERS="anon-2023-1909.02691 bonamy-2023-2302.13312 aliaj-2023-2107.04253 bal-2024-2301.05806 bangjensen-2024-2302.06177 csernk-2024-2112.14689 luzar-2024-2208.13297 daz-2024-2303.14229 do-2024-2202.06087 beaudou-2024-2309.04450 balogh-2025-2112.13277 zhu-2025-2208.02050 albrechtsen-2025-2403.19585 furuya-2025-2403.08465 dalal-2025-2405.07382"

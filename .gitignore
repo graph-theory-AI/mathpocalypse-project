@@ -1,0 +1,42 @@
+# --- Source papers: track ONLY metadata (registry.yaml). Never the PDFs or
+#     LaTeX sources (size + copyright). Repopulate with scripts/fetch_sources.py. ---
+papers/pdf/
+papers/src/
+papers/**/*.pdf
+papers/**/*.tex
+papers/**/*.tar.gz
+*.pdf
+
+# --- Model outputs (kept private in this public mirror; see README) ---
+reports/
+runs/
+out/
+*.jsonl.gz
+
+# --- Never publish: author correspondence ---
+outreach/
+
+# --- Internal AI-assistant / harness files (not part of the public product) ---
+CLAUDE.md
+.claude/
+
+# --- Python / uv ---
+.venv/
+__pycache__/
+*.pyc
+.uv/
+
+# --- Secrets / endpoints ---
+.env
+*.token
+secrets/
+
+# --- HPC job logs ---
+SLURM_*.out
+SLURM_*.err
+*.log
+slurm-*.out
+
+# --- OS / editor ---
+.DS_Store
+*.swp

@@ -1,0 +1,231 @@
+# Paper registry — the tracked index of papers in the experiment.
+# Sources live in papers/src/<arxiv_base>/ (gitignored); this file is the metadata.
+#
+# Phase 1 focus: French-authored graph-theory / combinatorics papers we trust to start with
+# (Marthe Bonamy, LaBRI, + selected French-authored JGT / EJC papers).
+# Only PUBLISHED papers are tested (no preprints — we report errors against the record).
+#
+# status:  collected | verifying | reported | authors_notified | resolved
+# verdict: (after a run) clean | minor_issues | major_issues | likely_wrong
+
+papers:
+  - id: aubian-2025-2510.01791
+    title: "On cuts of small chromatic number in sparse graphs"
+    authors:
+      - "Guillaume Aubian"
+      - "Marthe Bonamy"
+      - "Romain Bourneuf"
+      - "Oscar Fontaine"
+      - "Lucas Picasarri-Arrieta"
+    french_authored: true
+    venue: "Discrete Mathematics (2026)"
+    doi: 10.1016/j.disc.2026.115052
+    year: 2025
+    arxiv: "2510.01791v1"
+    primary_category: math.CO
+    source: tex
+    src_dir: papers/src/2510.01791
+    main_tex: main.tex
+    added: 2026-06-16
+    status: collected
+    verdict:
+    report:
+    notes: ""
+
+  - id: bonamy-2019-1910.00697
+    title: "Graphs of bounded cliquewidth are polynomially $χ$-bounded"
+    authors:
+      - "Marthe Bonamy"
+      - "Michał Pilipczuk"
+    french_authored: true
+    venue: "Advances in Combinatorics (2020)"
+    doi: 10.19086/aic.13668
+    year: 2019
+    arxiv: "1910.00697v3"
+    primary_category: cs.DM
+    source: tex
+    src_dir: papers/src/1910.00697
+    main_tex: boundedcliquewidth-v2.tex
+    added: 2026-06-16
+    status: collected
+    verdict:
+    report:
+    notes: ""
+
+  - id: blanché-2021-2110.08870
+    title: "Gallai's path decomposition in planar graphs"
+    authors:
+      - "Alexandre Blanché"
+      - "Marthe Bonamy"
+      - "Nicolas Bonichon"
+    french_authored: true
+    venue: "EuroComb 2021, extended abstract (Trends in Mathematics)"
+    doi: 10.1007/978-3-030-83823-2_121
+    year: 2021
+    arxiv: "2110.08870v2"
+    primary_category: math.CO
+    source: tex
+    src_dir: papers/src/2110.08870
+    main_tex: redaction.tex
+    added: 2026-06-16
+    status: collected
+    verdict:
+    report:
+    notes: ""
+
+  - id: bonamy-2014-1408.1964
+    title: "The Erdős-Hajnal Conjecture for Long Holes and Anti-holes"
+    authors:
+      - "Marthe Bonamy"
+      - "Nicolas Bousquet"
+      - "Stéphan Thomassé"
+    french_authored: true
+    venue: "SIAM J. Discrete Mathematics 30(2) (2016)"
+    doi: 10.1137/140981745
+    year: 2014
+    arxiv: "1408.1964v1"
+    primary_category: cs.DM
+    source: tex
+    src_dir: papers/src/1408.1964
+    main_tex: main.tex
+    added: 2026-06-16
+    status: collected
+    verdict:
+    report:
+    notes: ""
+
+  # --- Nicolas Nisse (Inria Sophia / I3S, Côte d'Azur) — selected well-published
+  #     combinatorics / graph-theory papers on arXiv. Added 2026-06-18.
+  - id: aubian-2022-2212.09188
+    title: "Problems, proofs, and disproofs on the inversion number"
+    authors:
+      - "Guillaume Aubian"
+      - "Frédéric Havet"
+      - "Florian Hörsch"
+      - "Felix Klingelhöfer"
+      - "Nicolas Nisse"
+      - "Clément Rambaud"
+      - "Quentin Vermande"
+    french_authored: true
+    venue: "Electronic J. Combinatorics 32(4) (2025)"
+    doi: 10.37236/12983
+    year: 2022
+    arxiv: "2212.09188v3"
+    primary_category: math.CO
+    source: tex
+    src_dir: papers/src/2212.09188
+    main_tex: main.tex
+    added: 2026-06-18
+    status: collected
+    verdict:
+    report:
+    notes: ""
+
+  - id: cohen-2016-1605.07762
+    title: "Subdivisions of oriented cycles in digraphs with large chromatic number"
+    authors:
+      - "Nathann Cohen"
+      - "Frédéric Havet"
+      - "William Lochet"
+      - "Nicolas Nisse"
+    french_authored: true
+    venue: "Journal of Graph Theory 89(4) (2018)"
+    doi: 10.1002/jgt.22360
+    year: 2016
+    arxiv: "1605.07762v1"
+    primary_category: math.CO
+    source: tex
+    src_dir: papers/src/1605.07762
+    main_tex: main.tex
+    added: 2026-06-18
+    status: collected
+    verdict:
+    report:
+    notes: ""
+
+  - id: chalopin-2010-1001.4457
+    title: "Cop and robber games when the robber can hide and ride"
+    authors:
+      - "Jérémie Chalopin"
+      - "Victor Chepoi"
+      - "Nicolas Nisse"
+      - "Yann Vaxès"
+    french_authored: true
+    venue: "SIAM J. Discrete Mathematics 25(1) (2011)"
+    doi: 10.1137/100784035
+    year: 2010
+    arxiv: "1001.4457v1"
+    primary_category: cs.DM
+    source: tex
+    src_dir: papers/src/1001.4457
+    main_tex: CopRobberFinal.tex
+    added: 2026-06-18
+    status: collected
+    verdict:
+    report:
+    notes: ""
+
+  - id: bosek-2017-1711.08836
+    title: "Centroidal localization game"
+    authors:
+      - "Bartłomiej Bosek"
+      - "Przemysław Gordinowicz"
+      - "Jarosław Grytczuk"
+      - "Nicolas Nisse"
+      - "Joanna Sokół"
+      - "Małgorzata Śleszyńska-Nowak"
+    french_authored: true
+    venue: "Electronic J. Combinatorics 25(4) (2018)"
+    doi: 10.37236/7488
+    year: 2017
+    arxiv: "1711.08836v2"
+    primary_category: math.CO
+    source: tex
+    src_dir: papers/src/1711.08836
+    main_tex: CentroidalGame_revised.tex
+    added: 2026-06-18
+    status: collected
+    verdict:
+    report:
+    notes: "French-authored (Nisse, Inria) collaboration with Polish co-authors."
+
+  - id: nisse-2023-2307.06700
+    title: "Redicolouring digraphs: directed treewidth and cycle-degeneracy"
+    authors:
+      - "Nicolas Nisse"
+      - "Lucas Picasarri-Arrieta"
+      - "Ignasi Sau"
+    french_authored: true
+    venue: "Discrete Applied Mathematics 356 (2024)"
+    doi: 10.1016/j.dam.2024.05.042
+    year: 2023
+    arxiv: "2307.06700v2"
+    primary_category: math.CO
+    source: tex
+    src_dir: papers/src/2307.06700
+    main_tex: main.tex
+    added: 2026-06-18
+    status: collected
+    verdict:
+    report:
+    notes: ""
+
+  - id: bonamy-2013-1303.4025
+    title: "Planar graphs with maximum degree D at least 8 are (D+1)-edge-choosable"
+    authors:
+      - "Marthe Bonamy"
+    french_authored: true
+    venue: "SIAM J. Discrete Mathematics 29(3) (2015)"
+    doi: 10.1137/130927449
+    year: 2013
+    arxiv: "1303.4025v1"
+    primary_category: cs.DM
+    source: tex
+    src_dir: papers/src/1303.4025
+    main_tex: main.tex
+    added: 2026-06-16
+    status: collected
+    verdict:
+    report:
+    notes: ""
+

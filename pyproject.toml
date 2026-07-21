@@ -1,0 +1,23 @@
+[project]
+name = "mathpocalypse"
+version = "0.1.0"
+description = "Using frontier LLMs (DeepSeek-V4-Flash, Claude) to detect errors and formalize proofs in published math/TCS papers."
+requires-python = ">=3.10"
+# Deliberately minimal. The model-serving stack lives in the sibling `bigLLM-azzurra`
+# project and runs on the cluster, not here. This package is the *harness*: it ingests
+# papers, builds verification prompts, drives a model, and collects structured reports.
+dependencies = [
+    "pyyaml>=6.0",      # paper registry
+    "requests>=2.31",   # arXiv / paper fetching
+]
+
+[project.optional-dependencies]
+# Whatever client we end up using to talk to the served model (TBD — see docs/log.md).
+client = [
+    "openai>=1.0",
+]
+dev = [
+    "ruff>=0.5",
+]
+
+[tool.uv]
