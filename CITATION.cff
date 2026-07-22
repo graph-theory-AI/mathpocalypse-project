@@ -25,7 +25,3 @@ date-released: "2026-07-22"
 url: "https://github.com/natema/mathpocalypse-project"
 repository-code: "https://github.com/natema/mathpocalypse-project"
 doi: 10.5281/zenodo.21499917
-identifiers:
-  - type: doi
-    value: 10.5281/zenodo.21499918
-    description: "Version 0.1.0 archived snapshot on Zenodo"
