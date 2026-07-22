@@ -1,7 +1,8 @@
 [project]
 name = "mathpocalypse"
 version = "0.1.0"
-description = "Using frontier LLMs (DeepSeek-V4-Flash, Claude) to detect errors and formalize proofs in published math/TCS papers."
+description = "Using frontier open-weight LLMs (GLM-5.2) to detect errors and formalize proofs in published math/TCS papers."
+license = "MIT"
 requires-python = ">=3.10"
 # Deliberately minimal. The model-serving stack lives in the sibling `bigLLM-azzurra`
 # project and runs on the cluster, not here. This package is the *harness*: it ingests
@@ -12,7 +13,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-# Whatever client we end up using to talk to the served model (TBD — see docs/log.md).
+# Client used to talk to the served model (OpenAI-compatible endpoint).
 client = [
     "openai>=1.0",
 ]

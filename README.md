@@ -134,3 +134,15 @@ The harness, prompts, registry, and method are fully public so the work can be r
 ## People
 
 Emanuele Natale (CNRS, Université Côte d'Azur) and Édouard Oyallon (CNRS, Sorbonne Université).
+
+## Acknowledgements
+
+This work was granted access to the HPC resources of IDRIS under the allocation
+2026-AD011018098 made by GENCI.
+
+Experiments presented in this work were carried out using the Grid'5000 testbed, supported by a
+scientific interest group hosted by Inria and including CNRS, RENATER and several Universities as
+well as other organizations (see https://www.grid5000.fr).
+
+The authors are grateful to the OPAL infrastructure from Université Côte d'Azur for providing
+resources and support (the Azzurra GPU cluster is operated within OPAL).
