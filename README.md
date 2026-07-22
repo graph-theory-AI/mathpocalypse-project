@@ -1,5 +1,7 @@
 # Mathpocalypse
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21499917.svg)](https://doi.org/10.5281/zenodo.21499917)
+
 **Can a frontier, fully open-source language model — run entirely on public research
 computers — help find genuine mistakes in the published mathematics literature?**
 
@@ -141,7 +143,7 @@ The harness, prompts, registry, and method are fully public so the work can be r
 ## Citation
 
 If Mathpocalypse is relevant to your work, please cite it. GitHub's **"Cite this repository"**
-button (generated from [`CITATION.cff`](CITATION.cff)) exports ready-made BibTeX and APA.
+button (below the About section, top right) exports ready-made BibTeX and APA.
 
 ```bibtex
 @software{mathpocalypse,
@@ -149,6 +151,7 @@ button (generated from [`CITATION.cff`](CITATION.cff)) exports ready-made BibTeX
   title   = {{Mathpocalypse}: detecting errors in published mathematics with open-source LLMs},
   year    = {2026},
   version = {0.1.0},
+  doi     = {10.5281/zenodo.21499917},
   url     = {https://github.com/natema/mathpocalypse-project}
 }
 ```
