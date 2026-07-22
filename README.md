@@ -133,7 +133,8 @@ The harness, prompts, registry, and method are fully public so the work can be r
 
 ## People
 
-Emanuele Natale (CNRS, Université Côte d'Azur) and Édouard Oyallon (CNRS, Sorbonne Université).
+[Emanuele Natale](https://natema.github.io/) (CNRS, Université Côte d'Azur) and
+[Édouard Oyallon](https://edouardoyallon.github.io/) (CNRS, Sorbonne Université).
 
 ## Acknowledgements
 
