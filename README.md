@@ -1,6 +1,6 @@
 # Mathpocalypse
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21499917.svg)](https://doi.org/10.5281/zenodo.21499917)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21499917-1682d4)](https://doi.org/10.5281/zenodo.21499917)
 
 **Can a frontier, fully open-source language model — run entirely on public research
 computers — help find genuine mistakes in the published mathematics literature?**
