@@ -16,7 +16,7 @@ high confidence, surfacing errors in the literature at scale and building an ope
 verified proofs. This repository is **Phase 1**: getting the *verification* right on a small,
 trusted set of papers. Formalization comes later.
 
-> ### These are flags, not accusations
+> ### These are flags, not verdicts
 >
 > An AI reading a proof produces a **hypothesis that a step might be wrong** — nothing more.
 > Many such flags are false alarms (the model misreads a figure, or a subtlety it missed
@@ -73,7 +73,7 @@ Aggregate base-rate statistics over the pilot corpus (GLM-5.2, latest run per pa
 | → self-dissolved (apparent false positive) | **78** |
 | → unsettled | 7 |
 | Author teams contacted (after light auditing) | **19** |
-| Replies so far | **6 of 19** — 4 confirmed the flag · 1 refuted · 1 under review |
+| Replies so far | **8 of 19** — 5 confirmed the flag · 1 refuted · 2 under review |
 
 **No confirmed hard-to-fix theorem-breaker yet** — the real prize. Every real flag so far has
 been a genuine, precisely-located gap that turned out to be fixable or that leaves an open
