@@ -11,15 +11,6 @@ The long-term vision — the half-joking "math-pocalypse" — is models that can
 re-check almost any paper and verify its correctness with high confidence, surfacing errors in
 the literature at scale.
 
-> ### These are flags, not verdicts
->
-> An AI reading a proof produces a **hypothesis that a step might be wrong** — nothing more.
-> Many such flags are false alarms (the model misreads a figure, or a subtlety it missed
-> resolves the concern). We treat every flag as *"the model thinks this might be a problem;
-> it may or may not be."* We write to authors only after a flag survives the adversarial pass
-> and our own (non-expert) check, we frame it as a question, and we defer entirely to the
-> authors' judgment. Nothing in this repo should be read as a claim that any paper is wrong.
-
 ## Contents
 
 - [How it works](#how-it-works)
@@ -59,6 +50,15 @@ personal communication — never sent to any commercial service.
 
 See [`docs/prompt_design.md`](docs/prompt_design.md) for the architecture rationale,
 including the map → verify-per-unit → aggregate pipeline idea.
+
+> ### These are flags, not verdicts
+>
+> An AI reading a proof produces a **hypothesis that a step might be wrong** — nothing more.
+> Many such flags are false alarms (the model misreads a figure, or a subtlety it missed
+> resolves the concern). We treat every flag as *"the model thinks this might be a problem;
+> it may or may not be."* We write to authors only after a flag survives the adversarial pass
+> and our own (non-expert) check, we frame it as a question, and we defer entirely to the
+> authors' judgment. Nothing in this repo should be read as a claim that any paper is wrong.
 
 ## Scope
 
