@@ -11,10 +11,8 @@ pass, then through some lighter auditing on our side before we decide whether to
 authors.
 
 The long-term vision — the half-joking "math-pocalypse" — is models that can reliably
-**formalize** almost any paper in a proof assistant (Lean) and verify its correctness with
-high confidence, surfacing errors in the literature at scale and building an open dataset of
-verified proofs. This repository is **Phase 1**: getting the *verification* right on a small,
-trusted set of papers. Formalization comes later.
+re-check almost any paper and verify its correctness with high confidence, surfacing errors in
+the literature at scale.
 
 > ### These are flags, not verdicts
 >
@@ -53,7 +51,7 @@ personal communication — never sent to any commercial service.
 See [`docs/prompt_design.md`](docs/prompt_design.md) for the architecture rationale,
 including the map → verify-per-unit → aggregate pipeline idea.
 
-## Scope (Phase 1)
+## Scope
 
 French-authored papers in graph theory and combinatorics, with the pilot corpus drawn from
 the **_Journal of Graph Theory_**. Working in a focused, well-understood slice keeps human

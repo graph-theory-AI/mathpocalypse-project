@@ -1,7 +1,7 @@
 [project]
 name = "mathpocalypse"
 version = "0.1.0"
-description = "Using frontier open-weight LLMs (GLM-5.2) to detect errors and formalize proofs in published math/TCS papers."
+description = "Using frontier open-weight LLMs (GLM-5.2) to detect errors in published math/TCS papers."
 license = "MIT"
 requires-python = ">=3.10"
 # Deliberately minimal. The model-serving stack lives in the sibling `bigLLM-azzurra`
