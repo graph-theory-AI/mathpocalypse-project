@@ -31,6 +31,7 @@ the literature at scale.
 - [Reproduce it](#reproduce-it)
 - [What is *not* in this repo](#what-is-intentionally-not-in-this-repo)
 - [Repository layout](#repository-layout)
+- [Citation](#citation)
 - [People](#people)
 - [Acknowledgements](#acknowledgements)
 
@@ -139,6 +140,21 @@ The harness, prompts, registry, and method are fully public so the work can be r
 | `papers/*.yaml` | Tracked paper metadata registries (sources themselves are gitignored). |
 | `docs/prompt_design.md` | Verification-architecture rationale. |
 | `docs/OUTCOMES.md` | Author-outreach outcomes table. |
+
+## Citation
+
+If Mathpocalypse is relevant to your work, please cite it. GitHub's **"Cite this repository"**
+button (generated from [`CITATION.cff`](CITATION.cff)) exports ready-made BibTeX and APA.
+
+```bibtex
+@software{mathpocalypse,
+  author  = {Natale, Emanuele and Oyallon, Édouard},
+  title   = {{Mathpocalypse}: detecting errors in published mathematics with open-source LLMs},
+  year    = {2026},
+  version = {0.1.0},
+  url     = {https://github.com/natema/mathpocalypse-project}
+}
+```
 
 ## People
 

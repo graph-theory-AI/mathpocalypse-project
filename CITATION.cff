@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use Mathpocalypse or its results, please cite it as below."
+title: "Mathpocalypse"
+abstract: >-
+  Open-source large language models used to detect potential errors in published
+  mathematics and theoretical-computer-science papers: a reproducible harness,
+  versioned verification prompts, and aggregate results.
+type: software
+authors:
+  - family-names: Natale
+    given-names: Emanuele
+    affiliation: "CNRS, Université Côte d'Azur"
+  - family-names: Oyallon
+    given-names: Édouard
+    affiliation: "CNRS, Sorbonne Université"
+keywords:
+  - large language models
+  - AI for mathematics
+  - proof verification
+  - graph theory
+  - combinatorics
+license: MIT
+version: 0.1.0
+date-released: "2026-07-22"
+url: "https://github.com/natema/mathpocalypse-project"
+repository-code: "https://github.com/natema/mathpocalypse-project"
+# On the first public release, Zenodo mints a DOI. Add it here, e.g.:
+# identifiers:
+#   - type: doi
+#     value: 10.5281/zenodo.XXXXXXX
+#     description: "Archived snapshot of this release on Zenodo"
