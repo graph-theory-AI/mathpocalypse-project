@@ -38,7 +38,7 @@ proposition / lemma. Trade-offs:
   subagent must be *given* those statements, or it flags "depends on unverified result" for
   everything and verifies nothing.
 
-**Architecture we built (Phase 1): an agent-based, triage-first, adversarial pipeline.**
+**The architecture we built: an agent-based, triage-first, adversarial pipeline.**
 It is *agent-driven, not parser-driven* — a deterministic LaTeX parser was prototyped and
 rejected as too brittle for the variability of human-written papers (custom `\def` theorem
 environments, definitions buried in prose, macro figures). The served open-weight model (the
