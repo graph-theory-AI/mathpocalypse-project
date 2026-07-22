@@ -5,10 +5,7 @@ computers — help find genuine mistakes in the published mathematics literature
 
 Mathpocalypse is a pilot study that runs an open-weight LLM over published mathematics /
 theoretical-computer-science papers and asks it to **carefully re-check the proofs and flag
-anything that looks potentially wrong** — a missing case, an unjustified step, a broken
-lemma. Every flag is then re-examined — first by the model itself in an adversarial second
-pass, then through some lighter auditing on our side before we decide whether to write to the
-authors.
+anything that looks potentially wrong** — a missing case, an unjustified step, a broken lemma.
 
 The long-term vision — the half-joking "math-pocalypse" — is models that can reliably
 re-check almost any paper and verify its correctness with high confidence, surfacing errors in
