@@ -23,6 +23,17 @@ the literature at scale.
 > and our own (non-expert) check, we frame it as a question, and we defer entirely to the
 > authors' judgment. Nothing in this repo should be read as a claim that any paper is wrong.
 
+## Contents
+
+- [How it works](#how-it-works)
+- [Scope](#scope)
+- [Results so far](#results-so-far)
+- [Reproduce it](#reproduce-it)
+- [What is *not* in this repo](#what-is-intentionally-not-in-this-repo)
+- [Repository layout](#repository-layout)
+- [People](#people)
+- [Acknowledgements](#acknowledgements)
+
 ## How it works
 
 The **detection pipeline is sovereign** by design: open-source models only, run exclusively
