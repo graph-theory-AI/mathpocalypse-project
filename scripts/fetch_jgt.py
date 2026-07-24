@@ -317,16 +317,27 @@ def main(argv: list[str]) -> int:
           f"({100 * len(matched) // max(len(papers), 1)}%)")
 
     # de-dup on arXiv id (an arXiv paper occasionally maps from two DBLP records)
-    seen, entries = set(), []
+    seen, fresh = set(), []
     for p, ax in matched:
         if ax in seen:
             continue
         seen.add(ax)
-        entries.append(to_entry(p, ax))
-    entries.sort(key=lambda e: (-e["year"], e["id"]))
+        fresh.append(to_entry(p, ax))
 
-    print(f"[3/4] writing {JGT_REGISTRY} ({len(entries)} entries)")
-    write_registry(entries, args.since)
+    # merge into whatever's already on disk -- a re-run (e.g. widening --since) must NOT
+    # clobber already-fetched main_tex/status/notes for papers we've already collected+verified.
+    existing = {e["arxiv"]: e for e in load_entries()}
+    n_new = 0
+    for e in fresh:
+        if e["arxiv"] in existing:
+            continue
+        existing[e["arxiv"]] = e
+        n_new += 1
+    entries = sorted(existing.values(), key=lambda e: (-e["year"], e["id"]))
+    since = min(args.since, min((e.get("year", args.since) for e in entries), default=args.since))
+
+    print(f"[3/4] merging: {n_new} new papers, {len(entries)} total (was {len(existing) - n_new})")
+    write_registry(entries, since)
 
     if args.metadata_only:
         print("[4/4] --metadata-only: skipping source download.")

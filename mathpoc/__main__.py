@@ -52,16 +52,22 @@ def _thinking_kwargs(style: str, effort: str) -> dict | None:
     """Map (model family, effort) -> the `chat_template_kwargs` the server's chat template wants.
     Returns None to send no thinking block at all.
 
-    Both DeepSeek-V4 and GLM-5.2 read a `reasoning_effort` field; they differ only in how
-    thinking is toggled:
+    DeepSeek-V4 and GLM-5.2 read a `reasoning_effort` field; they differ only in how thinking
+    is toggled. Poolside's Laguna has NO effort levels — thinking is a binary mode toggled by
+    `enable_thinking` alone (model card: `chat_template_kwargs={"enable_thinking": ...}`), so we
+    send only that flag and ignore `effort` beyond off-vs-on (an unknown `reasoning_effort` kwarg
+    would trip Laguna's chat template).
       - deepseek: thinking is opt-IN  -> {"thinking": true, "reasoning_effort": ...}
       - glm     : thinking is ON by default -> {"reasoning_effort": ...}; disable via
                   {"enable_thinking": false}
+      - laguna  : binary -> {"enable_thinking": true/false}; no effort field
     """
     if style == "deepseek":
         return None if effort == "off" else {"thinking": True, "reasoning_effort": effort}
     if style == "glm":
         return {"enable_thinking": False} if effort == "off" else {"reasoning_effort": effort}
+    if style == "laguna":
+        return {"enable_thinking": effort != "off"}
     raise ValueError(f"unknown thinking style: {style!r}")
 
 
@@ -222,9 +228,10 @@ def main(argv=None) -> int:
     v.add_argument("--top-p", type=float, default=1.0)
     v.add_argument("--reasoning-effort", choices=["off", "high", "max"], default="max",
                    help="thinking effort (chat_template_kwargs); 'max' = Think Max")
-    v.add_argument("--thinking-style", choices=["deepseek", "glm"], default="deepseek",
+    v.add_argument("--thinking-style", choices=["deepseek", "glm", "laguna"], default="deepseek",
                    help="how to encode thinking: deepseek (thinking:true+effort) | glm (effort; "
-                        "enable_thinking:false to disable). Use 'glm' for GLM-5.2.")
+                        "enable_thinking:false to disable) | laguna (binary enable_thinking, no "
+                        "effort). Use 'glm' for GLM-5.2, 'laguna' for Poolside Laguna S-2.1.")
     v.add_argument("--strip-figures", action="store_true",
                    help="drop tikz/pgf picture bodies (default keeps them; use only to fit an oversized paper)")
     v.add_argument("--self-verify", action="store_true",
@@ -246,8 +253,9 @@ def main(argv=None) -> int:
     vp.add_argument("--temperature", type=float, default=1.0)
     vp.add_argument("--top-p", type=float, default=1.0)
     vp.add_argument("--reasoning-effort", choices=["off", "high", "max"], default="max")
-    vp.add_argument("--thinking-style", choices=["deepseek", "glm"], default="deepseek",
-                    help="how to encode thinking in chat_template_kwargs; use 'glm' for GLM-5.2")
+    vp.add_argument("--thinking-style", choices=["deepseek", "glm", "laguna"], default="deepseek",
+                    help="how to encode thinking in chat_template_kwargs; 'glm' for GLM-5.2, "
+                         "'laguna' for Poolside Laguna S-2.1")
     vp.add_argument("--strip-figures", action="store_true",
                     help="drop tikz/pgf picture bodies (default keeps them)")
     vp.add_argument("--full", action="store_true", help="(dry-run) print full bundle text")

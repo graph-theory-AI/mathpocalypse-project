@@ -89,8 +89,9 @@ been a genuine, precisely-located gap that turned out to be fixable or that leav
 question, not a result that collapses. That is itself an informative finding about both the
 model and the health of this slice of the literature.
 
-The per-author outreach record — who we contacted and how they responded — is in
-[`docs/OUTCOMES.md`](docs/OUTCOMES.md).
+We share the specifics of each flag privately with the paper's authors and keep the per-author
+outreach record (who we contacted and how they responded) private; only the aggregate counts
+above are published.
 
 ## Reproduce it
 
@@ -138,7 +139,6 @@ The harness, prompts, registry, and method are fully public so the work can be r
 | `scripts/` | Source fetching, report triage, and cluster (SLURM) serving jobs. |
 | `papers/*.yaml` | Tracked paper metadata registries (sources themselves are gitignored). |
 | `docs/prompt_design.md` | Verification-architecture rationale. |
-| `docs/OUTCOMES.md` | Author-outreach outcomes table. |
 
 ## Citation
 

@@ -33,7 +33,12 @@
 #SBATCH --gres=gpu:4                 # full gpu_p6 node = 4x H100 80 GB
 #SBATCH --cpus-per-task=96           # ~physical cores of a gpu_p6 node
 #SBATCH --hint=nomultithread
-#SBATCH --time=04:00:00              # <= qos_gpu_h100-t3 (20h). 12 GPU x 4h = 48 GPU-h of the 500 budget
+#SBATCH --time=20:00:00              # <= qos_gpu_h100-t3 (20h) cap. Every real multi-paper batch
+                                      # (batch2, batch3) has needed the full 20h, not the old 4h
+                                      # default -- batch4's first submission used 4h "by omission"
+                                      # (no override on the sbatch command) and every one of the
+                                      # 10 jobs TIMEOUT'd mid-run, losing 123/200 papers to a
+                                      # partial verify (2026-07-21). 12 GPU x 20h = 240 GPU-h/job.
 #SBATCH --output=%x-%j.out
 #SBATCH --error=%x-%j.err
 set -euo pipefail
