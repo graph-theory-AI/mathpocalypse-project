@@ -1,6 +1,6 @@
 [project]
 name = "mathpocalypse"
-version = "0.1.0"
+version = "0.1.1"
 description = "Using frontier open-weight LLMs (GLM-5.2) to detect errors in published math/TCS papers."
 license = "MIT"
 requires-python = ">=3.10"

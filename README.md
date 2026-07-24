@@ -150,7 +150,7 @@ button (below the About section, top right) exports ready-made BibTeX and APA.
   author  = {Natale, Emanuele and Oyallon, Édouard},
   title   = {{Mathpocalypse}: detecting errors in published mathematics with open-source LLMs},
   year    = {2026},
-  version = {0.1.0},
+  version = {0.1.1},
   doi     = {10.5281/zenodo.21499917},
   url     = {https://github.com/natema/mathpocalypse-project}
 }
