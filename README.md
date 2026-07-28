@@ -74,15 +74,15 @@ Aggregate base-rate statistics over the pilot corpus (GLM-5.2, latest run per pa
 
 | Metric | Value |
 |---|---|
-| Papers scanned | **306** |
-| Total flags raised | **886** (~2.9 per paper) |
-| Whole-paper assessment (after self-verify) | 47 clean · 183 minor · **75 with a major flag** · 1 likely-wrong |
-| Major/critical flags sent to adversarial self-verify | **204** |
-| → confirmed on re-check | **119** |
-| → self-dissolved (apparent false positive) | **78** |
-| → unsettled | 7 |
-| Author teams contacted (after light auditing) | **23** |
-| Replies so far | **11 of 23** — 6 confirmed the flag · 3 refuted · 2 under review |
+| Papers scanned | **481** |
+| Total flags raised | **1357** (~2.8 per paper) |
+| Whole-paper assessment (after self-verify) | 74 clean · 288 minor · **118 with a major flag** · 1 likely-wrong |
+| Major/critical flags sent to adversarial self-verify | **303** |
+| → confirmed on re-check | **173** |
+| → self-dissolved (apparent false positive) | **120** |
+| → unsettled | 10 |
+| Author teams contacted (after light auditing) | **28** |
+| Replies so far | **13 of 28** — 8 confirmed the flag · 3 refuted · 2 under review |
 
 **No confirmed hard-to-fix theorem-breaker yet** — the real prize. Every real flag so far has
 been a genuine, precisely-located gap that turned out to be fixable or that leaves an open
