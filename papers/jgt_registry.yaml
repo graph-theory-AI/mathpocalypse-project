@@ -8422,7 +8422,7 @@ papers:
   arxiv: '1804.04894'
   source: tex
   src_dir: papers/src/1804.04894
-  main_tex: hp_example.tex
+  main_tex: partitions_jgt.tex
   dblp_key: journals/jgt/SchweserS21
   added: '2026-06-26'
   status: collected

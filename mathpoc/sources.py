@@ -10,8 +10,12 @@ import re
 
 from .registry import Paper
 
-# \input{foo} / \include{foo}  (brace form — by far the most common on arXiv)
-_INCLUDE_RE = re.compile(r"\\(?:input|include)\{([^}]+)\}")
+# \input{foo} / \include{foo} / \subfile{foo}  (brace form — by far the most common on arXiv).
+# \subfile (from the `subfiles` package) behaves like \input for our flattening purposes; a
+# paper split into \subfile{...} sections was silently truncated to just its wrapper file
+# before this was added (natalchenko-2025-2407.01101, found during batch4 adjudication,
+# 2026-08-04 — see docs/jgt_adjudication.md).
+_INCLUDE_RE = re.compile(r"\\(?:input|include|subfile)\{([^}]+)\}")
 
 # Optional, opt-in only: TikZ/pgf picture bodies. OFF by default — proofs often refer to
 # their figures ("the construction in Fig. 3"), so dropping them can lose verifiable content.

@@ -225,8 +225,23 @@ def load_entries() -> list[dict]:
 
 
 # ----------------------------------------------------------------- step 4: sources + main_tex
+_LINE_COMMENT_RE = re.compile(r"(?<!\\)%.*")  # LaTeX comment: unescaped % to end of line
+
+
+def _strip_comments(txt: str) -> str:
+    return "\n".join(_LINE_COMMENT_RE.sub("", line) for line in txt.split("\n"))
+
+
 def detect_main_tex(dest: str) -> str:
-    """Pick the LaTeX entry point: a .tex with \\documentclass, preferring \\begin{document}."""
+    """Pick the LaTeX entry point: a .tex with \\documentclass, preferring \\begin{document}.
+
+    Commented-out lines are stripped before scoring -- a figure/standalone subfile often
+    carries its own commented-out \\documentclass{standalone}/\\begin{document} (for
+    optional standalone compilation) which used to out-score the paper's real, longer main
+    file on the tie-break (shorter filename wins). Caught via bousquetmlou-2024-2110.07633
+    and schweser-2021-1804.04894 picking a tiny figure/example file instead of the real
+    main.tex, 2026-08-04 (see docs/jgt_adjudication.md).
+    """
     cands = []
     for root, _, files in os.walk(dest):
         for fn in files:
@@ -237,6 +252,7 @@ def detect_main_tex(dest: str) -> str:
                 txt = open(path, encoding="utf-8", errors="replace").read()
             except OSError:
                 continue
+            txt = _strip_comments(txt)
             rel = os.path.relpath(path, dest)
             score = 0
             if "\\documentclass" in txt:
