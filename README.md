@@ -153,7 +153,7 @@ button (below the About section, top right) exports ready-made BibTeX and APA.
   year    = {2026},
   version = {0.1.1},
   doi     = {10.5281/zenodo.21499917},
-  url     = {https://github.com/natema/mathpocalypse-project}
+  url     = {https://github.com/graph-theory-AI/mathpocalypse-project}
 }
 ```
 
