@@ -82,8 +82,8 @@ Aggregate base-rate statistics over the pilot corpus (GLM-5.2, latest run per pa
 | → confirmed on re-check | **247** |
 | → self-dissolved (apparent false positive) | **152** |
 | → unsettled | 13 |
-| Author teams contacted (after light auditing) | **28** |
-| Replies so far | **16 of 28** — 10 confirmed the flag · 3 refuted · 3 under review |
+| Author teams contacted (after light auditing) | **32** |
+| Replies so far | **19 of 32** — 11 confirmed the flag · 4 refuted · 4 under review |
 
 **No confirmed hard-to-fix theorem-breaker yet** — the real prize. Every real flag so far has
 been a genuine, precisely-located gap that turned out to be fixable or that leaves an open
