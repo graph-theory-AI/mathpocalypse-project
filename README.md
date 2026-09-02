@@ -64,9 +64,10 @@ including the map → verify-per-unit → aggregate pipeline idea.
 
 ## Scope
 
-French-authored papers in graph theory and combinatorics, with the pilot corpus drawn from
-the **_Journal of Graph Theory_**. Working in a focused, well-understood slice keeps human
-adjudication tractable while we get the verification prompt right.
+Graph theory and combinatorics papers with an arXiv preprint, drawn from the **_Journal of
+Graph Theory_**, the **_European Journal of Combinatorics_**, and the **_Electronic Journal of
+Combinatorics_**. Working in a well-understood slice of the literature keeps human adjudication
+tractable while we get the verification prompt right.
 
 ## Results so far
 
